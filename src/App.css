@@ -1,0 +1,85 @@
+/* App styles */
+
+.App-header, .footer {
+  height: 200px;
+  padding: 20px;
+  color: white;
+  vertical-align: middle;
+  line-height: 90px;
+}
+
+.card-wrapper {
+  padding: 5% 5%;
+  background: #fff;
+}
+
+.card {
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(163,163,163,1);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(163,163,163,1);
+  box-shadow: 0px 0px 11px 0px rgba(163,163,163,1);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3% 0;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .answerOption {
+  list-style-type: none;
+  padding: 15px 0;
+  border-bottom: 0.5px solid rgb(222, 222, 222);
+}
+
+.card .answerOption:first-child {
+  border-top: 0.5px solid rgb(222, 222, 222);
+}
+
+.card .answerOption, .card .answerOption label {
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.card .answerOption:hover {
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card .radioCustomButton {
+  margin-right: 10px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.card .radioCustomButton:checked ~ label {
+  color: #4fbdf4;
+}
+
+.answerOptions {
+  text-align: left;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.question-wrapper h2 {
+  padding-bottom: 20px;
+}
+
+.result-wrapper {
+  padding: 3% 0;
+}
+
+.isCorrect-wrapper img {
+  max-width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer i {
+	color: rgb(245, 90, 86);
+}
