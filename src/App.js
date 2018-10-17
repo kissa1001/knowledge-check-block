@@ -53,11 +53,18 @@ class App extends Component {
   }
 
   findisCorrect(selectedAnswer) {
-    return this.state.answers.filter(item => item.feedback === selectedAnswer).map(item => item.isCorrect)
+    return this.state.answers.reduce((acc, answer) => {
+      if(acc) {return true}
+      return selectedAnswer === answer.feedback && answer.isCorrect
+    }, false)
   }
 
   renderResults() {
-    return <Result onReset={this.handleReset} feedback={this.state.selectedAnswer} isCorrect={this.state.isCorrect} />
+    return (
+      <Result onReset={this.handleReset}
+      feedback={this.state.selectedAnswer}
+      isCorrect={this.state.isCorrect} />
+    )
   }
 
   render() {
@@ -86,7 +93,7 @@ class App extends Component {
                 )}
               </ul>
             </div>
-            {this.state.showResults ? this.renderResults() : <button className="btn-blue" onClick={this.handleSubmit}>Submit</button>}
+            {this.state.showResults ? this.renderResults() : <button className="btn-blue" onClick={this.handleSubmit} disabled={!this.state.selectedAnswer}>Submit</button>}
           </div>
         </div>
         <div className="footer">

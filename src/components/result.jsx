@@ -7,7 +7,7 @@ const Result = (props) => {
   return (
       <div className="result-wrapper">
         <div className="isCorrect-wrapper">
-          <img src={props.isCorrect[0] ? correct : wrong} alt='isCorrect img' />
+          <img src={props.isCorrect ? correct : wrong} alt='isCorrect img' />
         </div>
         <h3>{props.feedback}</h3>
         <button className="btn-blue" onClick={props.onReset}>Reset</button>
